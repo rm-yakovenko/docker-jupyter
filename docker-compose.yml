@@ -3,6 +3,7 @@ version: '3'
 services:
   jupyter:
     build: ./docker
+    command: start-notebook.sh --NotebookApp.allow_origin='https://colab.research.google.com' --NotebookApp.port_retries=0
     ports:
       - 127.0.0.1:8888:8888
     volumes:
